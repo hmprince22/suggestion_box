@@ -1,11 +1,17 @@
 <?php
 require_once('repository/SuggestionRepo.php');
-$suggestionRepo = new SuggestionRepo();
+require_once('repository/suggestionTypeRepo.php');
 
+$suggestionRepo = new SuggestionRepo();
+$suggestionTypeRepo = new SuggestionTypeRepo();
 
 $show = $suggestionRepo->show_all_sug();
-
-
+$view = $suggestionTypeRepo->getAll();
+if(isset($_GET['submit'])){
+  $suggestion = $_GET['suggestion'];
+  $search = $_GET['search'];
+  $show = $suggestionRepo->search($search,$suggestion);
+}
 
 ?>
 
@@ -16,11 +22,24 @@ $show = $suggestionRepo->show_all_sug();
 </head>
 <body>
 
+  <form id="form" method="get" action ="allSugesstion.php">
+    <select name="suggestion" id="">
+      <?php
+      foreach ($view as $row) { ?>
+          <option value="<?php echo $row['id']?>"><?php echo $row['name'] ?></option>
+        <?php }
+      ?>
+    </select><br>
+    <textarea name="search" id="" rows="3" cols="20"></textarea>
+    <input id="" name="submit" type="submit" value="submit">
+  </form>
+
+
 <table align="center">
   <tr>
     <th>id</th>
     <th>details</th>
-    <th>creted_date</th>
+    <th>created_date</th>
     <th>suggestion type</th>
   </tr>
   <?php
@@ -38,5 +57,7 @@ $show = $suggestionRepo->show_all_sug();
 
   ?>
 </table>
+
+
 </body>
 </html>

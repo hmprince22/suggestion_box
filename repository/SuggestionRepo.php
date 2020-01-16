@@ -28,6 +28,15 @@ class SuggestionRepo Extends BaseRepo {
 
   }
 
+  function search($name,$type){
+    $sql = "SELECT suggestion.id, suggestion.details, suggestion.created_date, sugesstion_type.name FROM suggestion
+    LEFT JOIN sugesstion_type ON suggestion.sugesstion_type_id=sugesstion_type.id WHERE suggestion.details LIKE '%$name%' AND sugesstion_type.id LIKE '%$type%'";
+    $result  = mysqli_query($this->db,$sql);
+    $resultSet = mysqli_fetch_all($result,MYSQLI_ASSOC);
+    return $resultSet;
+
+  }
+
 
 }
 ?>

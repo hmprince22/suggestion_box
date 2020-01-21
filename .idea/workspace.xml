@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2564782-5bd5-4de7-98b2-7d8976a45356" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/allSugesstion.php" beforeDir="false" afterPath="$PROJECT_DIR$/allSugesstion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/repository/SuggestionRepo.php" beforeDir="false" afterPath="$PROJECT_DIR$/repository/SuggestionRepo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submitLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/submitLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submitSugession.php" beforeDir="false" afterPath="$PROJECT_DIR$/submitSugession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/submitUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/submitUser.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,11 +55,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579084804584</updated>
-      <workItem from="1579084814320" duration="17300000" />
+      <workItem from="1579084814320" duration="17904000" />
+      <workItem from="1579504723941" duration="25947000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1579504732044">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1579504732044" />
   </component>
 </project>

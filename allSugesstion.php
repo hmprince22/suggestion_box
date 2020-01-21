@@ -41,16 +41,19 @@ if(isset($_GET['submit'])){
     <th>details</th>
     <th>created_date</th>
     <th>suggestion type</th>
+      <th>user_name</th>
+
   </tr>
   <?php
   foreach ($show as $row) {
-
        ?>
         <tr>
           <td><?php echo $row['id']; ?></td>
           <td><?php echo $row['details']; ?></td>
           <td><?php echo $row['created_date']; ?></td>
           <td><?php echo $row['name']; ?></td>
+            <td><?php echo $row['username']; ?></td>
+
         </tr>
 
     <?php }

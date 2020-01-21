@@ -1,8 +1,14 @@
 <?php
+session_start();
 require_once('repository/SuggestionRepo.php');
 $suggestionRepo = new SuggestionRepo();
+
 $name = $_POST['fname'];
 $type = $_POST['suggestion'];
-$suggestionRepo->insert($name,$type);
-//echo "Successfully done";
+$login_id = $_SESSION['id'];
+
+$suggestionRepo->insert($name,$type,$login_id);
+
+
+
 ?>
